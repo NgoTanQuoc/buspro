@@ -33,7 +33,7 @@
                 $signup_sucess = true;
         }
 
-        // Redirect Page
+          // Redirect page
         header("location: ../../admin/dashboard.php");
     }
 
