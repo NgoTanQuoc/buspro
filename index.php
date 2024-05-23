@@ -70,7 +70,7 @@
 
             $booked_seat = $row["booked_seat"];
             $booked_timing = $row["booking_created"];
-
+ 
             $dep_date = get_from_table($conn, "routes", "route_id", $route_id, "route_dep_date");
 
             $dep_time = get_from_table($conn, "routes", "route_id", $route_id, "route_dep_time");
@@ -331,7 +331,7 @@
             Bạn có chắc không?
             </h2>
             <p>
-            Bạn có thực sự muốn xóa đặt phòng của bạn? <strong></strong>
+            Bạn có thực sự muốn xóa? <strong></strong>
             </p>
             <!-- Needed to pass pnr -->
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" id="delete-form"  method="POST">

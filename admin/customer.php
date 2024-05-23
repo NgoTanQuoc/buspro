@@ -271,11 +271,11 @@
                     <div class="modal-body">
                         <form id="addCustomerForm" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST">
                             <div class="mb-3">
-                                <label for="cfirstname" class="form-label">Tên khách hàng</label>
+                                <label for="cfirstname" class="form-label">Họ khách hàng</label>
                                 <input type="text" class="form-control" id="cfirstname" name="cfirstname">
                             </div>
                             <div class="mb-3">
-                                <label for="clastname" class="form-label">Họ của khách hàng</label>
+                                <label for="clastname" class="form-label">Tên khách hàng</label>
                                 <input type="text" class="form-control" id="clastname" name="clastname">
                             </div>
                             <div class="mb-3">

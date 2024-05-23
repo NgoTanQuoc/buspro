@@ -13,48 +13,48 @@ function styleNav()
 const destState = document.querySelector(".route-desc").dataset.dest;
 const covidInfo = document.querySelector("#covidInfo");
 
-const endpoint = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
+// const endpoint = "https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true";
 
-let data;
+// let data;
 
-async function getCovidData()
-{
-    const response = await fetch(endpoint);
-    data = await response.json();
-    data = data.regionData.find(({region}) => 
-    {
-        return region.toUpperCase() === destState.toUpperCase();
-    });
-    console.log(data);
-    covidInfo.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <h4 class="alert-heading">Destination Covid Details</h4> 
-    <p>Destination State : <strong>${destState.toUpperCase()}<strong></p>
-    <hr>
-    <p class="mb-0">
-        <ul class="covid-details">
-            <li>
-                <strong>Active Cases : </strong>
-                ${data.activeCases}
-            </li>
-            <li>
-                <strong>Total Infected : </strong>
-                ${data.totalInfected}
-            </li>
-            <li>
-                <strong>Total Recovered : </strong>
-                ${data.recovered}
-            </li>
-            <li>
-                <strong>Total Deceased : </strong>
-                ${data.deceased}
-            </li>
-        </ul>
-    </p>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>`;
-}
+// async function getCovidData()
+// {
+//     const response = await fetch(endpoint);
+//     data = await response.json();
+//     data = data.regionData.find(({region}) => 
+//     {
+//         return region.toUpperCase() === destState.toUpperCase();
+//     });
+//     console.log(data);
+//     covidInfo.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+//     <h4 class="alert-heading">Destination Covid Details</h4> 
+//     <p>Destination State : <strong>${destState.toUpperCase()}<strong></p>
+//     <hr>
+//     <p class="mb-0">
+//         <ul class="covid-details">
+//             <li>
+//                 <strong>Active Cases : </strong>
+//                 ${data.activeCases}
+//             </li>
+//             <li>
+//                 <strong>Total Infected : </strong>
+//                 ${data.totalInfected}
+//             </li>
+//             <li>
+//                 <strong>Total Recovered : </strong>
+//                 ${data.recovered}
+//             </li>
+//             <li>
+//                 <strong>Total Deceased : </strong>
+//                 ${data.deceased}
+//             </li>
+//         </ul>
+//     </p>
+//     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+//   </div>`;
+// }
 
-getCovidData();
+// getCovidData();
 
 
 function capitalize(data)
